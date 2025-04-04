@@ -17,16 +17,29 @@ namespace Projeto2
             InitializeComponent();
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="Beatriz" && textBox2.Text == "2424")
+            if (textBox1.Text == "Beatriz" && textBox2.Text == "2424") // Verifica login e senha
             {
-                MessageBox.Show("Bem vindo ao sistema!");
+                MessageBox.Show("Bem-vindo ao sistema!");
+
+                Form2 formConteudo = new Form2(); 
+                formConteudo.Show();
+
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Login ou senha inválidos.");
             }
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
