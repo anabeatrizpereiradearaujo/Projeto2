@@ -12,6 +12,7 @@ namespace Projeto2
 {
     public partial class Form1 : Form
     {
+        Thread nt;
         public Form1()
         {
             InitializeComponent();
@@ -19,10 +20,23 @@ namespace Projeto2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="Beatriz" && textBox2.Text == "2424")
+         
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Application.Run(new ConteudoGeografia());
+        }
+
+        private void btn_Conectar_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Beatriz" && textBox2.Text == "2424")
             {
-                MessageBox.Show("Bem vindo ao sistema!");
+
+              
             }
+               
+
             else
             {
                 MessageBox.Show("Login ou senha inválidos.");
